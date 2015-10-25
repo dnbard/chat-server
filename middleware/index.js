@@ -17,7 +17,7 @@ exports.init = function(app){
     app.use(cookieParser());
     app.use(bodyParser.json());
     app.use(session({
-        secret: config.get('sessionSecret'),
+        secret: config['sessionSecret'],
         cookie: { secure: false },
         resave: false,
         saveUninitialized: true
